@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Главная</title>
+    <meta charset="UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- <style>body{opacity: 0;}</style> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!-- <meta name="robots" content="noindex, nofollow"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="js/app.js"></script>
+  </head>
+
+  <body class="red">
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__section">
+            <div class="header__menu menu">
+              <a href="#" class="_icon-gear menu__setting btn">Setting</a>
+              <div class="menu__subsetting subsett">
+                <div class="subsett__main">
+                  <div class="subsett__header">
+                    <span>Timer Setting</span>
+                    <a href="#" class="btn-close">&times;</a>
+                  </div>
+                  <hr />
+                  <div class="subsett__body subbody">
+                    <div class="subbody__setTime setTime">
+                      <div class="setTime__header">Time (minutes)</div>
+                      <div class="setTime__body">
+                        <div class="setTime__block">
+                          <label for="time-0">Pomodoro</label>
+                          <input id="time-0" type="number" value="0.05" />
+                        </div>
+                        <div class="setTime__block">
+                          <label for="time-1">Short Break</label>
+                          <input id="time-1" type="number" value="5" />
+                        </div>
+                        <div class="setTime__block">
+                          <label for="time-2">Long Break</label>
+                          <input id="time-2" type="number" value="15" />
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="subbody__setInterval setInterval">
+                      <div class="setInterval__body">
+                        <div class="setInterval__block">
+                          <label for="interval">Long Break interval</label>
+                          <input id="interval" type="number" value="3" />
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="subbody__audioVol audioVol">
+                      <div class="audioVol__body">
+                        <div class="audioVol__block">
+                          <label for="interval">Volume Sound</label>
+                          <input
+                            class="audioVol__vol"
+                            type="range"
+                            min="0"
+                            max="9"
+                            step="1"
+                            value="5"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="subsett__footer">
+                  <a href="#" class="subsett__btn">OK</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </header>
+
+      <main class="page">
+        <div class="clock">
+          <div class="clock__container">
+            <div class="clock__section">
+              <div class="clock__box">
+                <div class="clock__steps">
+                  <a
+                    href="#"
+                    data-name="0"
+                    class="clock__step btn clock__step-active"
+                  >
+                    General</a
+                  >
+                  <a href="#" data-name="1" class="clock__step btn"
+                    >Short Break</a
+                  >
+                  <a href="#" data-name="2" class="clock__step btn"
+                    >Long Break</a
+                  >
+                </div>
+                <div data-clock="0" class="clock__time clock__time-active">
+                  25:00
+                </div>
+                <div class="clock__btns">
+                  <a
+                    href="#"
+                    data-start="start"
+                    class="clock__btn clock__btn-red"
+                    >Start</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="taskList">
+          <div class="taskList__container">
+            <div class="taskList__section-1">
+              <h2 class="taskList__header">Time to Focus</h2>
+              <form id="task__form">
+                <input
+                  type="text"
+                  id="task__input"
+                  autocomplete="off"
+                  placeholder="What do you have planned?"
+                />
+                <input type="submit" id="task__submit" value="Add Task" />
+              </form>
+              <div class="taskList__section-2">
+                <h3 class="taskList__header-2">Tasks</h3>
+                <div id="tasks"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container"></div>
+      </footer>
+    </div>
+    <!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
+		</div>
+	</div>
+</div>
+ -->
+  </body>
+</html>
